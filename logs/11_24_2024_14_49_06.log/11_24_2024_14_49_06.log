@@ -1,0 +1,6 @@
+[ 2024-11-24 14:49:06,873 ] 148 numexpr.utils - INFO - Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[ 2024-11-24 14:49:06,873 ] 160 numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+[ 2024-11-24 14:49:09,095 ] 25 root - INFO - read the data
+[ 2024-11-24 14:49:09,103 ] 27 root - INFO - create a diredtocry
+[ 2024-11-24 14:49:09,109 ] 30 root - INFO - pass the raw data to that particular path
+[ 2024-11-24 14:49:09,114 ] 34 root - INFO - split the data as train and test data
