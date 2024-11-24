@@ -1,0 +1,13 @@
+prefix=D:/RESUME ML PROJECTS/Medical Insuarnce/venv/Library
+exec_prefix=D:/RESUME ML PROJECTS/Medical Insuarnce/venv/Library
+libdir=D:/RESUME ML PROJECTS/Medical Insuarnce/venv/Library/lib
+sharedlibdir=D:/RESUME ML PROJECTS/Medical Insuarnce/venv/Library/lib
+includedir=D:/RESUME ML PROJECTS/Medical Insuarnce/venv/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
