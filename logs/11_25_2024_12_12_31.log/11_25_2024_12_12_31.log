@@ -1,0 +1,5 @@
+[ 2024-11-25 12:12:32,274 ] 12 root - INFO - create a predict function to predict the data
+[ 2024-11-25 12:12:32,274 ] 36 root - INFO - create a get data as daatframe bcoz we can pass the datafarme to the model
+[ 2024-11-25 12:12:32,289 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-11-25 12:12:32,289 ] 97 werkzeug - INFO -  * Debugger PIN: 422-215-330
+[ 2024-11-25 12:12:33,541 ] 97 werkzeug - INFO -  * Detected change in 'd:\\resume ml projects\\medical insuarnce\\app.py', reloading
