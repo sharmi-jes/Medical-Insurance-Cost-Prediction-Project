@@ -1,0 +1,17 @@
+[ 2024-11-25 11:07:45,635 ] 22 root - INFO - get data transformation
+[ 2024-11-25 11:07:45,740 ] 28 root - INFO - read the data
+[ 2024-11-25 11:07:45,748 ] 30 root - INFO - create a diredtocry
+[ 2024-11-25 11:07:45,748 ] 33 root - INFO - pass the raw data to that particular path
+[ 2024-11-25 11:07:45,756 ] 37 root - INFO - split the data as train and test data
+[ 2024-11-25 11:07:45,764 ] 83 root - INFO - Creating preprocessor object
+[ 2024-11-25 11:07:45,764 ] 47 root - INFO - return the preprocessor
+[ 2024-11-25 11:07:45,764 ] 89 root - INFO - drop target col from the train andn test data
+[ 2024-11-25 11:07:45,768 ] 95 root - INFO - apply preprocessor for the train and test data
+[ 2024-11-25 11:07:45,787 ] 98 root - INFO - combine the input data and target col in the train and test data
+[ 2024-11-25 11:07:45,788 ] 24 root - INFO - split the train and test data as x_train,y_train,x_test,y_tets
+[ 2024-11-25 11:07:45,788 ] 32 root - INFO - take the models
+[ 2024-11-25 11:07:46,636 ] 43 root - INFO - calculate best score
+[ 2024-11-25 11:07:46,636 ] 49 root - INFO - take the best model
+[ 2024-11-25 11:07:46,686 ] 56 root - INFO - check the relation 
+[ 2024-11-25 11:07:46,686 ] 59 root - INFO - we get best score both on train and test data
+[ 2024-11-25 11:07:46,686 ] 60 root - INFO - predicted the x_test data

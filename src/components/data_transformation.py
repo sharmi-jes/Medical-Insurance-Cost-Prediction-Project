@@ -1,17 +1,16 @@
 import sys
 import os
-import pandas as pd
-import numpy as np
-
 from src.exception import CustomException
 from src.logger import logging
-
+import pandas as pd
+import numpy as np
 from sklearn.preprocessing import StandardScaler,OneHotEncoder
-from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
-from dataclasses import dataclass
 from src.utils import save_object
+from dataclasses import dataclass
+
 
 @dataclass
 class DataTransformationConfig:
@@ -20,12 +19,10 @@ class DataTransformationConfig:
 class DataTransformation:
     def __init__(self):
         self.transformation_config=DataTransformationConfig()
-
+    logging.info("get data transformation")
     def get_data_transformation(self):
-        logging.info("get the data transformation based on the data")
-        numerical_cols=['age', 'bmi', 'children', ]
+        numerical_cols=['age', 'bmi', 'children']
         categorical_cols=['sex', 'smoker', 'region']
-
 
         num_pipeline=Pipeline(
             steps=[
@@ -37,8 +34,7 @@ class DataTransformation:
         cat_pipeline=Pipeline(
             steps=[
                 ("imputer",SimpleImputer(strategy="most_frequent")),
-                ("onehotencoder",OneHotEncoder()),
-                ("scaler",StandardScaler())
+                ("onehotencoder",OneHotEncoder())
             ]
         )
 
@@ -48,12 +44,11 @@ class DataTransformation:
                 ("cat_pipeline",cat_pipeline,categorical_cols)
             ]
         )
-
-
+        logging.info("return the preprocessor") 
         return preprocessor
     
     
-    def intiate_data_transformatio(self, train_data, test_data):
+    def initiate_data_transformation(self, train_data, test_data):
         """
         Transforms train and test data using the preprocessor and saves the preprocessor object.
 
@@ -88,28 +83,25 @@ class DataTransformation:
             logging.info("Creating preprocessor object")
 
 
+            target_col="charges"
 
-            target_column_name="charges"
-            logging.info("take the preprocessor for the transfer train and test data as a same format")
             preprocessor_obj=self.get_data_transformation()
-             
-            logging.info("drop the traget col from the train and test") 
-            input_train_data_path=train_df.drop(columns=[target_column_name],axis=1)
-            target_feature_train_df=train_df[target_column_name]
-            input_test_data_path=test_df.drop(columns=[target_column_name],axis=1)
-            target_feature_test_df=test_df[target_column_name]
+            logging.info("drop target col from the train andn test data") 
+            input_train_df=train_df.drop(columns=[target_col])
+            input_target=train_df[target_col]
 
-            logging.info("apply preprocessor obj for input triana nd test data")
-            preprocessor_obj_train_path=preprocessor_obj.fit_transform(input_train_data_path)
-            preprocessor_obj_test_path=preprocessor_obj.transform(input_test_data_path)
-            
-            logging.info("combine the targeta nd inpendent features")
-            train_arr=np.c_[
-                preprocessor_obj_train_path,np.array(target_feature_train_df),
-                
+            input_test_df=test_df.drop(columns=[target_col])
+            input_target_test=test_df[target_col]
+            logging.info("apply preprocessor for the train and test data")
+            input_preprocessor_train=preprocessor_obj.fit_transform(input_train_df)
+            input_preprocessor_test=preprocessor_obj.transform(input_test_df)
+            logging.info("combine the input data and target col in the train and test data")
+            train_array=np.c_[
+                input_preprocessor_train,np.array(input_target)
             ]
-            test_arr=np.c_[
-                preprocessor_obj_test_path,np.array(target_feature_test_df)
+
+            test_array=np.c_[
+                input_preprocessor_test,np.array(input_target_test)
             ]
 
             save_object(
@@ -118,10 +110,12 @@ class DataTransformation:
             )
 
             return(
-                train_arr,
-                test_arr,
-                self.transformation_config.preprocessor_obj_file_path,
-                
+                train_array,
+                test_array,
+                self.transformation_config.preprocessor_obj_file_path
             )
+        
         except Exception as e:
             raise CustomException(e,sys)
+
+       

@@ -1,0 +1,6 @@
+[ 2024-11-25 10:48:46,702 ] 22 root - INFO - get data transformation
+[ 2024-11-25 10:48:46,702 ] 25 root - INFO - read the data
+[ 2024-11-25 10:48:46,719 ] 27 root - INFO - create a diredtocry
+[ 2024-11-25 10:48:46,719 ] 30 root - INFO - pass the raw data to that particular path
+[ 2024-11-25 10:48:46,726 ] 34 root - INFO - split the data as train and test data
+[ 2024-11-25 10:48:46,740 ] 52 root - INFO - take the train and test data bcoz we transform the data
