@@ -3,107 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Page</title>
+    <title>Insurance Information Form</title>
     <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #f5a623;
+            --background-color: #f0f4f8;
+            --card-background: #ffffff;
+            --text-color: #333333;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #db66c6, #dc4498); /* Lavender gradient */
+            background-color: var(--background-color);
+            background: linear-gradient(purple,rgb(201, 63, 162));
+            background-position: to right;
+            color: var(--text-color);
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
-        .form-container {
-            background-color: #e165dd; /* Pink color for form */
+
+        .card {
+            background-color: var(--card-background);
+            background: linear-gradient(pink,rgb(120, 177, 199));
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
             width: 100%;
-            max-width: 450px;
+            max-width: 500px;
         }
-        .form-container h2 {
+
+        h1 {
+            color: black;
             text-align: center;
-            margin-bottom: 25px;
-            color:black;
-            font-size: 26px;
-            background: linear-gradient(90deg, #ff758c, #ff7eb3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
         }
-        .form-group {
-            margin-bottom: 20px;
+
+        p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
         }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: #5a5a5a;
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
             font-weight: bold;
-            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
         }
-        .form-group input, 
-        .form-group select {
+
+        input, select {
             width: 100%;
-            padding: 10px 12px;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            font-size: 14px;
-            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
         }
-        .form-group select {
-            background-color: #fff;
+
+        input[type="number"] {
+            -moz-appearance: textfield;
         }
-        .submit-btn {
-            width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+        }
+
+        button {
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 18px;
             cursor: pointer;
-            transition: background 0.3s ease-in-out;
+            transition: background-color 0.3s ease;
         }
-        .submit-btn:hover {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+
+        button:hover {
+            background-color: #3a7bc8;
         }
-        .form-footer {
-            margin-top: 15px;
-            text-align: center;
-            color: #5a5a5a;
-            font-size: 14px;
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>User Information Form</h2>
-        <form method="POST" action="{{url_for('predict_datapoint')}}">
-            <!-- Numerical Inputs -->
-            <div class="form-group">
+    <div class="card">
+        <h1>Medical Insurance Prediction</h1>
+        <!-- <p>Please provide your details for an accurate quote</p> -->
+        <form action="{{url_for('predict_datapoint')}}" method="POST">
+            <div>
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                <input type="number" id="age" name="age" required min="18" max="100">
             </div>
-            <div class="form-group">
+            <div>
                 <label for="bmi">BMI:</label>
-                <input type="number" step="0.1" id="bmi" name="bmi" placeholder="Enter your BMI" required>
+                <input type="number" id="bmi" name="bmi" required min="10" max="50" step="0.1">
             </div>
-            <div class="form-group">
+            <div>
                 <label for="children">Number of Children:</label>
-                <input type="number" id="children" name="children" placeholder="Enter number of children" required>
+                <input type="number" id="children" name="children" required min="0" max="20">
             </div>
-
-            <!-- Categorical Inputs -->
-            <div class="form-group">
+            <div>
                 <label for="sex">Sex:</label>
                 <select id="sex" name="sex" required>
-                    <option value="">Select your gender</option>
+                    <option value="">Select sex</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="smoker">Smoker:</label>
                 <select id="smoker" name="smoker" required>
                     <option value="">Are you a smoker?</option>
@@ -111,25 +141,21 @@
                     <option value="no">No</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div>
                 <label for="region">Region:</label>
                 <select id="region" name="region" required>
-                    <option value="">Select your region</option>
-                    <option value="northwest">Northwest</option>
+                    <option value="">Select region</option>
                     <option value="northeast">Northeast</option>
-                    <option value="southwest">Southwest</option>
+                    <option value="northwest">Northwest</option>
                     <option value="southeast">Southeast</option>
+                    <option value="southwest">Southwest</option>
                 </select>
             </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit">Predict</button>
         </form>
-        <h2>The preidtcion is {{results}}</h2>
-        <div class="form-footer">
-            <p>Fill out the form and click submit.</p>
-        </div>
+        <h2>The Prediction is {{results}}</h2>
     </div>
 </body>
 </html>
+
 

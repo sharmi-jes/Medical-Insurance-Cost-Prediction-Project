@@ -1,0 +1,21 @@
+[ 2024-11-26 08:13:56,486 ] 12 root - INFO - create a predict function to predict the data
+[ 2024-11-26 08:13:56,486 ] 36 root - INFO - create a get data as daatframe bcoz we can pass the datafarme to the model
+[ 2024-11-26 08:13:56,501 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2024-11-26 08:13:56,511 ] 97 werkzeug - INFO -  * Debugger PIN: 422-215-330
+[ 2024-11-26 08:14:03,462 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:14:03] "GET / HTTP/1.1" 200 -
+[ 2024-11-26 08:14:07,978 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:14:07] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:17:15,750 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:17:15] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:18:17,378 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:18:17] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:18:49,644 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:18:49] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:19:20,614 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:19:20] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:19:29,905 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:19:29] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:20:28,898 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:20:28] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:24:45,310 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:24:45] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:25:57,914 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:25:57] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:27:20,638 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:27:20] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:27:20,661 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:27:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2024-11-26 08:27:58,528 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:27:58] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:28:29,855 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:28:29] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:28:44,142 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:28:44] "GET /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:29:35,022 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:29:35] "POST /predictdata HTTP/1.1" 200 -
+[ 2024-11-26 08:30:56,033 ] 97 werkzeug - INFO - 127.0.0.1 - - [26/Nov/2024 08:30:56] "POST /predictdata HTTP/1.1" 200 -
