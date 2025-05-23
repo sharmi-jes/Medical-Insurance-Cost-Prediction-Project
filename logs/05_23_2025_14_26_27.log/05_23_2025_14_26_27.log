@@ -1,0 +1,12 @@
+[ 2025-05-23 14:26:31,449 ] 22 root - INFO - get data transformation
+[ 2025-05-23 14:26:35,935 ] 28 root - INFO - read the data
+[ 2025-05-23 14:26:35,948 ] 30 root - INFO - create a diredtocry
+[ 2025-05-23 14:26:35,948 ] 33 root - INFO - pass the raw data to that particular path
+[ 2025-05-23 14:26:35,962 ] 37 root - INFO - split the data as train and test data
+[ 2025-05-23 14:26:35,977 ] 83 root - INFO - Creating preprocessor object
+[ 2025-05-23 14:26:35,977 ] 47 root - INFO - return the preprocessor
+[ 2025-05-23 14:26:35,977 ] 89 root - INFO - drop target col from the train andn test data
+[ 2025-05-23 14:26:35,977 ] 95 root - INFO - apply preprocessor for the train and test data
+[ 2025-05-23 14:26:36,009 ] 98 root - INFO - combine the input data and target col in the train and test data
+[ 2025-05-23 14:26:36,009 ] 135 root - INFO - split the train and test data as x_train,y_train,x_test,y_test
+[ 2025-05-23 14:26:36,009 ] 143 root - INFO - take the models

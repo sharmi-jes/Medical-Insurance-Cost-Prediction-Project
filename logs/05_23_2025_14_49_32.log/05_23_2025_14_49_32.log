@@ -1,0 +1,16 @@
+[ 2025-05-23 14:49:34,382 ] 22 root - INFO - get data transformation
+[ 2025-05-23 14:49:38,059 ] 28 root - INFO - read the data
+[ 2025-05-23 14:49:38,065 ] 30 root - INFO - create a diredtocry
+[ 2025-05-23 14:49:38,066 ] 33 root - INFO - pass the raw data to that particular path
+[ 2025-05-23 14:49:38,073 ] 37 root - INFO - split the data as train and test data
+[ 2025-05-23 14:49:38,082 ] 83 root - INFO - Creating preprocessor object
+[ 2025-05-23 14:49:38,083 ] 47 root - INFO - return the preprocessor
+[ 2025-05-23 14:49:38,083 ] 89 root - INFO - drop target col from the train andn test data
+[ 2025-05-23 14:49:38,085 ] 95 root - INFO - apply preprocessor for the train and test data
+[ 2025-05-23 14:49:38,102 ] 98 root - INFO - combine the input data and target col in the train and test data
+[ 2025-05-23 14:49:38,114 ] 148 root - INFO - Split the train and test data as x_train, y_train, x_test, y_test
+[ 2025-05-23 14:49:38,114 ] 156 root - INFO - Initialize models
+[ 2025-05-23 14:49:46,240 ] 204 root - INFO - Model evaluation completed.
+[ 2025-05-23 14:49:46,240 ] 210 root - INFO - Best model: GradientBoostingRegressor with score 0.9006885528992274
+[ 2025-05-23 14:49:46,618 ] 217 root - INFO - Logged GradientBoostingRegressor model to MLflow
+[ 2025-05-23 14:49:46,664 ] 227 root - INFO - Final R2 score: 0.9006885528992274

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/RESUME%20ML%20PROJECTS/Medical%20Insuarnce/mlruns/0/f128d16c2daf4936943d1fa6ce4b00be/artifacts
+end_time: 1747991646914
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f128d16c2daf4936943d1fa6ce4b00be
+run_name: Model_Training_GradientBoostingRegressor
+run_uuid: f128d16c2daf4936943d1fa6ce4b00be
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1747991637701
+status: 3
+tags: []
+user_id: HP
