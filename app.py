@@ -32,3 +32,7 @@ def predict_datapoint():
         except Exception as e:
             print("Error during prediction:", e)
             return render_template("home.html", error=str(e))
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Render requires this for port binding
+    app.run(host='0.0.0.0', port=port, debug=True)
