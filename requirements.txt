@@ -5,7 +5,7 @@ anyio==4.8.0
 appdirs==1.4.4
 astunparse==1.6.3
 backoff==2.2.1
-# -e git+https://github.com/sharmi-jes/Bangalore-House-Prices.git@53656468a4b1e2456a331b7034fd1bea4a29ccf2#egg=Bangalore_house_prices
+
 blinker==1.9.0
 boto3==1.37.0
 botocore==1.37.0
@@ -16,7 +16,7 @@ click==8.1.8
 cloudpickle==3.1.1
 colorama==0.4.6
 contourpy==1.3.0
-# -e git+https://github.com/sharmi-jes/Credit-Card-Fraud-Detection.git@d003c77b5d3e6ff49daa526304436f871de1f77b#egg=Credit_Card_Fraud_Detection
+
 cycler==0.12.1
 dacite==1.6.0
 dagshub==0.5.9
@@ -72,7 +72,7 @@ MarkupSafe==3.0.2
 marshmallow==3.26.1
 matplotlib==3.9.4
 mdurl==0.1.2
-# -e git+https://github.com/sharmi-jes/Medical-Insurance-Cost-Prediction-Project.git@99d221d5f4276b2b9ea2f359fa2aa480e6f69f4e#egg=Medical_Insurance
+
 ml-dtypes==0.4.1
 mlflow==2.22.0
 mlflow-skinny==2.22.0
@@ -132,7 +132,7 @@ sniffio==1.3.1
 SQLAlchemy==2.0.38
 sqlparse==0.5.3
 starlette==0.46.2
-# -e git+https://github.com/sharmi-jes/Students-Academic-Performance-Dataset.git@99c0e5dc3540df087cd374c56553cee17dc11119#egg=Student_Academic_Perfomrace
+
 tenacity==9.0.0
 tensorboard==2.18.0
 tensorboard-data-server==0.7.2
