@@ -138,6 +138,14 @@ from src.exception import CustomException
 from src.utils import save_object
 # from src.config.configuration import ModelTrainerConfig
 
+import dagshub
+dagshub.init(repo_owner='sharmi-jes', repo_name='Medical-Insurance-Cost-Prediction-Project', mlflow=True)
+
+# import mlflow
+# with mlflow.start_run():
+#   mlflow.log_param('parameter name', 'value')
+#   mlflow.log_metric('metric name', 1)
+
 @dataclass
 class ModelTrainer:
     def __init__(self):
