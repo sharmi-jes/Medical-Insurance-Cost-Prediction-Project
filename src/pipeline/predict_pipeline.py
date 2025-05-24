@@ -14,6 +14,12 @@ class PredictPipeline:
         try:
             model_file="artifacts/model.pkl"
             preprocessor_file="artifacts/preprocessor.pkl"
+            import os
+            print("Current Working Directory:", os.getcwd())
+
+            print("Model file exists:", os.path.exists("artifacts/model.pkl"))
+            print("Preprocessor file exists:", os.path.exists("artifacts/preprocessor.pkl"))
+
             model=load_object(file_path=model_file)
             preprocessor=load_object(file_path=preprocessor_file)
             data_sclaed=preprocessor.transform(features)
