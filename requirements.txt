@@ -8,7 +8,8 @@ pyPDF2
 python-docx
 joblib
 jsonify
-scikit-learn
+scikit-learn==1.5.2
+
 docker
 gunicorn
 dill
