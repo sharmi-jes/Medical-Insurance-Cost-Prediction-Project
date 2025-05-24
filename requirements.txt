@@ -11,3 +11,4 @@ jsonify
 scikit-learn
 docker
 gunicorn
+dill
