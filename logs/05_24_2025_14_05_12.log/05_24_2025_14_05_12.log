@@ -1,0 +1,7 @@
+[ 2025-05-24 14:05:13,282 ] 12 root - INFO - create a predict function to predict the data
+[ 2025-05-24 14:05:13,282 ] 36 root - INFO - create a get data as daatframe bcoz we can pass the datafarme to the model
+[ 2025-05-24 14:05:13,296 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-05-24 14:05:13,301 ] 97 werkzeug - INFO -  * Debugger PIN: 822-782-089
+[ 2025-05-24 14:05:15,049 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/May/2025 14:05:15] "GET / HTTP/1.1" 200 -
+[ 2025-05-24 14:05:16,713 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/May/2025 14:05:16] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-05-24 14:05:29,779 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/May/2025 14:05:29] "POST /predictdata HTTP/1.1" 200 -

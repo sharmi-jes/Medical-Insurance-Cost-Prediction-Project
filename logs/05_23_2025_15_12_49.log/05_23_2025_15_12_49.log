@@ -1,0 +1,22 @@
+[ 2025-05-23 15:12:53,038 ] 22 root - INFO - get data transformation
+[ 2025-05-23 15:12:59,021 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-05-23 15:12:59,030 ] 107 dagshub - INFO - Accessing as sharmi-jes
+[ 2025-05-23 15:12:59,833 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/sharmi-jes/Medical-Insurance-Cost-Prediction-Project "HTTP/1.1 200 OK"
+[ 2025-05-23 15:13:00,735 ] 1025 httpx - INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[ 2025-05-23 15:13:00,739 ] 107 dagshub - INFO - Initialized MLflow to track repo "sharmi-jes/Medical-Insurance-Cost-Prediction-Project"
+[ 2025-05-23 15:13:00,739 ] 107 dagshub - INFO - Repository sharmi-jes/Medical-Insurance-Cost-Prediction-Project initialized!
+[ 2025-05-23 15:13:00,748 ] 28 root - INFO - read the data
+[ 2025-05-23 15:13:00,762 ] 30 root - INFO - create a diredtocry
+[ 2025-05-23 15:13:00,763 ] 33 root - INFO - pass the raw data to that particular path
+[ 2025-05-23 15:13:00,775 ] 37 root - INFO - split the data as train and test data
+[ 2025-05-23 15:13:00,793 ] 83 root - INFO - Creating preprocessor object
+[ 2025-05-23 15:13:00,793 ] 47 root - INFO - return the preprocessor
+[ 2025-05-23 15:13:00,793 ] 89 root - INFO - drop target col from the train andn test data
+[ 2025-05-23 15:13:00,799 ] 95 root - INFO - apply preprocessor for the train and test data
+[ 2025-05-23 15:13:00,829 ] 98 root - INFO - combine the input data and target col in the train and test data
+[ 2025-05-23 15:13:00,834 ] 156 root - INFO - Split the train and test data as x_train, y_train, x_test, y_test
+[ 2025-05-23 15:13:00,834 ] 164 root - INFO - Initialize models
+[ 2025-05-23 15:13:09,540 ] 212 root - INFO - Model evaluation completed.
+[ 2025-05-23 15:13:09,540 ] 218 root - INFO - Best model: GradientBoostingRegressor with score 0.9006885528992274
+[ 2025-05-23 15:13:11,367 ] 225 root - INFO - Logged GradientBoostingRegressor model to MLflow
+[ 2025-05-23 15:13:12,268 ] 235 root - INFO - Final R2 score: 0.9006885528992274

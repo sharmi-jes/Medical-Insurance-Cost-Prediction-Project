@@ -1,0 +1,8 @@
+[ 2025-05-24 14:05:11,032 ] 12 root - INFO - create a predict function to predict the data
+[ 2025-05-24 14:05:11,032 ] 36 root - INFO - create a get data as daatframe bcoz we can pass the datafarme to the model
+[ 2025-05-24 14:05:11,066 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.55.104:5000
+[ 2025-05-24 14:05:11,066 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-05-24 14:05:11,069 ] 97 werkzeug - INFO -  * Restarting with stat

@@ -6,6 +6,5 @@ Flask
 gunicorn
 mlflow
 dagshub
-dill
 docker
 -e .
