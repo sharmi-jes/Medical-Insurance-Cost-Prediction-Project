@@ -7,4 +7,5 @@ gunicorn
 mlflow
 dagshub
 docker
+dill
 -e .
